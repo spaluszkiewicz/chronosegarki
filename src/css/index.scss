@@ -45,6 +45,15 @@ a.section{
     background-image: linear-gradient(#ffffff9c, #e1e1e196);
 
   }
+  .prompt{
+  border-radius: 30px;
+  }
+  .ui.icon.input>input{
+    padding-right: 7em !important;
+  }
+  .ui.small.input{
+    margin-right: 6em;
+  }
   .justifyitems{
     display: flex;
     justify-content: center;
@@ -109,6 +118,11 @@ a.section{
   .margintop{
     padding-top: 2rem
   }
+  .centerIMG{
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+  }
   .right-column {
     .product-name {
       font-size: 2em;
@@ -125,6 +139,14 @@ a.section{
       justify-content: space-between;
       flex-wrap: wrap;
     }
+    .flex_justify-button{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .flex_justify-button > div{
+      padding-top: 1em !important;
+    }
     .alignitems{
       @extend .flex_justify;
       align-items: center;
@@ -135,15 +157,17 @@ a.section{
     .price{
       background-color: transparent;
       font-size: 1.3em;
-      border: 1px solid transparent !important;
       border-radius: 30px;
       box-shadow: 0 5px 7px 1px $grey;
-      width: 200px;
+      border: none;
+      width: 150px;
+      padding: .78571429em 1.5em .78571429em;
     }
     .Availabe{
       border-radius: 30px;
       border: 2px solid;
       padding: 10px 30px;
+      font-size:12px;
     }
     .buttons{
       display: inline-flex;
@@ -156,7 +180,6 @@ a.section{
       border-bottom-left-radius: 30px;
       margin-right: 0;
       border: 1px solid;
-      border-right:1px solid;
       font-size: 1.3em;
 
 
@@ -278,7 +301,16 @@ a.section{
         top:0;
         background-color: $black;
         z-index: -1;
-        border-color: black;
+      }
+      &:before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1%;
+        left: 0%;
+        top: 0;
+        background-color: $grey;
+        z-index: 2;
       }
      a {
        color: white;
@@ -288,6 +320,18 @@ a.section{
          color: $grey;
        }
      }
+    }
+    .whiteDiv{
+      &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 135%;
+        right: -32%;
+        top: -35%;
+        background-color: white;
+        z-index: -2;
+      }
     }
     .email{
       @extend .phone;
@@ -325,7 +369,7 @@ a.section{
     background-color: white;
     h3 {
       font-size: 1.2em;
-      padding-bottom: 2em;
+      padding-bottom: 1em;
       font-weight: bold;
     }
     ul{
@@ -371,4 +415,25 @@ a.section{
         border-bottom: 1px solid $grey;
       }
     }
+    .godPlease{
+      margin-top: 2em !important;
+    }
   }
+@media screen and (max-width: 1200px){
+  #top {
+    .ui.small.input {
+    margin-right: 0 ;
+    }
+  }
+}
+@media  (min-width:769px) and (max-width: 1050px){
+  .product{
+    .flex_justify-button{
+    justify-content: center !important;
+    }
+    .price{
+      width: 200px !important;
+    }
+
+  }
+}

@@ -14,6 +14,15 @@ a.section {
 .whiteMe {
   background-color: white; }
 
+.beforeWhite:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  position: absolute;
+  right: -30%;
+  z-index: -1; }
+
 .breadcrumb .section {
   padding: 2em 0 1em !important; }
 
@@ -25,6 +34,19 @@ a.section {
 
 .paddingbot5em {
   padding-bottom: 5em !important; }
+
+.paddingtop-left2em {
+  padding-top: 2em;
+  padding-left: 2em; }
+
+.header1 {
+  font-size: 2.5em;
+  padding-top: 1.5em;
+  background-color: white; }
+  .header1 p {
+    margin-left: 1em; }
+  .header1 span {
+    font-weight: bold; }
 
 .border-bottom-grey {
   border-bottom: 1px solid #dcdcdcbf; }
@@ -201,7 +223,7 @@ a.section {
     position: absolute;
     width: 100%;
     height: 100%;
-    left: -61%;
+    left: -30.55%;
     top: 0;
     background-color: #242424;
     z-index: -1; }
@@ -211,6 +233,11 @@ a.section {
   border: 3px solid #753280;
   border-radius: 30px;
   padding: 10px 40px; }
+  .bestdeals .btn-seeMore-custom:hover {
+    color: #753280;
+    background-color: white;
+    font-weight: 900;
+    border-color: white; }
 .bestdeals h2 {
   font-size: 2em;
   color: white; }
@@ -224,6 +251,9 @@ a.section {
     top: -68px;
     background-color: white;
     z-index: -1; }
+.bestdeals h3 {
+  font-size: 2em;
+  color: white; }
 .bestdeals tr {
   color: white; }
 .bestdeals .upMe {
@@ -241,9 +271,13 @@ a.section {
 .contact .btn-faq-custom {
   color: black;
   background-color: transparent;
-  border-color: #753280;
+  border: 3px solid #753280;
   border-radius: 30px;
   padding: 10px 40px; }
+  .contact .btn-faq-custom:hover {
+    color: white;
+    background-color: #753280;
+    border-color: white; }
 .contact .phone, .contact .email {
   position: relative;
   z-index: 2; }
@@ -261,7 +295,7 @@ a.section {
     position: absolute;
     width: 100%;
     height: 1%;
-    left: 0%;
+    left: 0;
     top: 0;
     background-color: #dcdcdcbf;
     z-index: 2; }
@@ -313,22 +347,32 @@ a.section {
 .stopka p {
   line-height: 1.5em; }
 
+.mobileSlider .texts {
+  padding-left: 2em; }
+  .mobileSlider .texts h2 {
+    font-size: 2em; }
+  .mobileSlider .texts h3 {
+    font-size: 1.5em;
+    padding: 1.5em 0; }
+  .mobileSlider .texts p {
+    font-size: 1.2em; }
+.mobileSlider .btn-seeMore-custom {
+  color: black;
+  background-color: transparent;
+  border: 3px solid #753280;
+  border-radius: 30px;
+  padding: 10px 40px;
+  position: absolute;
+  bottom: 10%; }
+  .mobileSlider .btn-seeMore-custom:hover {
+    color: #753280;
+    background-color: white;
+    font-weight: 900;
+    border-color: white; }
+
 @media screen and (max-width: 768px) {
   .wrapme {
     flex-direction: column; }
-
-  .centertext {
-    text-align: center !important; }
-
-  .listStyle {
-    list-style-type: none !important; }
-
-  .info .violetBorderTop {
-    border-top: 3px solid white; }
-  .info .VioletBorderMobile {
-    border-top: 3px solid #753280; }
-  .info .border-bottom-greyMobile {
-    border-bottom: 1px solid #dcdcdcbf; }
 
   .godPlease {
     margin-top: 2em !important; }
@@ -336,12 +380,16 @@ a.section {
   .contact .whiteDiv:after {
     display: none; }
 
-  .bestdeals {
-    /*.centerMe {
-      text-align: -webkit-center;
-    }*/ }
-    .bestdeals h2:before {
-      display: none; } }
+  .bestdeals h2:before {
+    display: none; } }
+@media screen and (max-width: 767px) {
+  .info .violetBorderTop {
+    border-top: 3px solid white; }
+  .info .border-bottom-greyMobile {
+    border-bottom: 1px solid #dcdcdcbf; } }
+.smallScreenOnly {
+  display: none; }
+
 @media screen and (max-width: 1200px) {
   #top .ui.small.input {
     margin-right: 0; } }
@@ -350,9 +398,30 @@ a.section {
     justify-content: center !important; }
   .product .price {
     width: 200px !important; } }
+@media (min-width: 768px) {
+  .texts {
+    padding-left: 9em !important; } }
+@media (min-width: 600px) and (max-width: 991px) {
+  .mobileSlider .btn-seeMore-custom {
+    padding: 10px 40px !important; } }
 @media only screen and (max-width: 991px) {
   .ui[class*="tablet stackable"].table tr > td, .ui[class*="tablet stackable"].table tr > th {
     width: initial !important;
-    display: table-cell !important; } }
+    display: table-cell !important; }
+
+  .largeScreenOnly {
+    display: none !important; }
+
+  .smallScreenOnly {
+    display: block; }
+
+  .info .centerMeTablet {
+    text-align: center !important; }
+  .info .listStyle {
+    list-style-type: none !important; }
+  .info .noBorderMobile {
+    border-top: none !important; }
+  .info .VioletBorderMobile {
+    border-top: 3px solid #753280; } }
 
 /*# sourceMappingURL=index.css.map */
